@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skribe"
+version = "0.1.0"
+description = "SKRIBE — score and polish written work with the FZI rubric. CLI, library, and MCP server. No model or key needed for the built-in scorer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Joshua Lofland" }]
+keywords = ["writing", "scoring", "rubric", "quality", "mcp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing",
+]
+dependencies = []
+
+[project.scripts]
+skribe = "skribe.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/BROKE-N-BORED/SKRIBE"
+
+[tool.setuptools.packages.find]
+where = ["src"]
